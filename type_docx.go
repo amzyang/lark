@@ -59,7 +59,7 @@ type DocxBlock struct {
 	Callout        *DocxBlockCallout        `json:"callout,omitempty"`         // 高亮块 Block, 19 DocxBlockTypeCallout
 	ChatCard       *DocxBlockChatCard       `json:"chat_card,omitempty"`       // 群聊卡片 Block, 20 DocxBlockTypeChatCard
 	Diagram        *DocxBlockDiagram        `json:"diagram,omitempty"`         // 流程图/UML Block, 21 DocxBlockTypeDiagram
-	Divider        DocxBlockDivider         `json:"divider,omitempty"`         // 分割线 Block, 22 DocxBlockTypeDivider
+	Divider        *DocxBlockDivider        `json:"divider,omitempty"`         // 分割线 Block, 22 DocxBlockTypeDivider
 	File           *DocxBlockFile           `json:"file,omitempty"`            // 文件 Block, 23 DocxBlockTypeFile
 	Grid           *DocxBlockGrid           `json:"grid,omitempty"`            // 分栏 Block, 24 DocxBlockTypeGrid
 	GridColumn     *DocxBlockGridColumn     `json:"grid_column,omitempty"`     // 分栏列 Block, 25 DocxBlockTypeGridColumn
@@ -77,7 +77,7 @@ type DocxBlock struct {
 	OKRObjective   *DocxBlockOKRObjective   `json:"okr_objective,omitempty"`   // OKR Objective, 37 DocxBlockTypeOKRObjective
 	OKRKeyResult   *DocxBlockOKRKeyResult   `json:"okr_key_result,omitempty"`  // OKR KR Block, 38 DocxBlockTypeOKRKeyResult
 	OKRProgress    *DocxBlockOKRProgress    `json:"okr_progress,omitempty"`    // OKR Progress, 39 DocxBlockTypeOKRProgress
-	AddOns         *DocxBlockAddOns         `json:"add_ons"`                   // 文档小组件 Block, 40 DocxBlockTypeAddOns
+	AddOns         *DocxBlockAddOns         `json:"add_ons,omitempty"`         // 文档小组件 Block, 40 DocxBlockTypeAddOns
 	JiraIssue      *DocxBlockJiraIssue      `json:"jira_issue,omitempty"`      // Jira 问题 Block, 41 DocxBlockJiraIssue
 	WikiCatalog    *DocxBlockWikiCatalog    `json:"wiki_catalog,omitempty"`    // Wiki 子目录 Block, 42 DocxBlockWikiCatalog
 	Board          *DocxBlockBoard          `json:"board,omitempty"`           // 画板 Block, 43 DocxBlockBoard

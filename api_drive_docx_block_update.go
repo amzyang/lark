@@ -100,14 +100,14 @@ type UpdateDocxBlockReqDeleteGridColumn struct {
 
 // UpdateDocxBlockReqDeleteTableColumns ...
 type UpdateDocxBlockReqDeleteTableColumns struct {
-	ColumnStartIndex int64 `json:"column_start_index,omitempty"` // 列开始索引（区间左闭右开）示例值: 0 最小值: `0`
-	ColumnEndIndex   int64 `json:"column_end_index,omitempty"`   // 列结束索引（区间左闭右开）示例值: 1 最小值: `1`
+	ColumnStartIndex int64 `json:"column_start_index"` // 列开始索引（区间左闭右开）示例值: 0 最小值: `0`
+	ColumnEndIndex   int64 `json:"column_end_index"`   // 列结束索引（区间左闭右开）示例值: 1 最小值: `1`
 }
 
 // UpdateDocxBlockReqDeleteTableRows ...
 type UpdateDocxBlockReqDeleteTableRows struct {
-	RowStartIndex int64 `json:"row_start_index,omitempty"` // 行开始索引（区间左闭右开）示例值: 0 最小值: `0`
-	RowEndIndex   int64 `json:"row_end_index,omitempty"`   // 行结束索引（区间左闭右开）示例值: 1 最小值: `1`
+	RowStartIndex int64 `json:"row_start_index"` // 行开始索引（区间左闭右开）示例值: 0 最小值: `0`
+	RowEndIndex   int64 `json:"row_end_index"`   // 行结束索引（区间左闭右开）示例值: 1 最小值: `1`
 }
 
 // UpdateDocxBlockReqInsertGridColumn ...
@@ -127,10 +127,10 @@ type UpdateDocxBlockReqInsertTableRow struct {
 
 // UpdateDocxBlockReqMergeTableCells ...
 type UpdateDocxBlockReqMergeTableCells struct {
-	RowStartIndex    int64 `json:"row_start_index,omitempty"`    // 行起始索引（区间左闭右开）示例值: 0 最小值: `0`
-	RowEndIndex      int64 `json:"row_end_index,omitempty"`      // 行结束索引（区间左闭右开）示例值: 1 最小值: `1`
-	ColumnStartIndex int64 `json:"column_start_index,omitempty"` // 列起始索引（区间左闭右开）示例值: 0 最小值: `0`
-	ColumnEndIndex   int64 `json:"column_end_index,omitempty"`   // 列结束索引（区间左闭右开）示例值: 1 最小值: `1`
+	RowStartIndex    int64 `json:"row_start_index"`    // 行起始索引（区间左闭右开）示例值: 0 最小值: `0`
+	RowEndIndex      int64 `json:"row_end_index"`      // 行结束索引（区间左闭右开）示例值: 1 最小值: `1`
+	ColumnStartIndex int64 `json:"column_start_index"` // 列起始索引（区间左闭右开）示例值: 0 最小值: `0`
+	ColumnEndIndex   int64 `json:"column_end_index"`   // 列结束索引（区间左闭右开）示例值: 1 最小值: `1`
 }
 
 // UpdateDocxBlockReqReplaceFile ...
@@ -154,8 +154,8 @@ type UpdateDocxBlockReqReplaceImageCaption struct {
 
 // UpdateDocxBlockReqUnmergeTableCells ...
 type UpdateDocxBlockReqUnmergeTableCells struct {
-	RowIndex    int64 `json:"row_index,omitempty"`    // table 行索引示例值: 0 最小值: `0`
-	ColumnIndex int64 `json:"column_index,omitempty"` // table 列索引示例值: 0 最小值: `0`
+	RowIndex    int64 `json:"row_index"`    // table 行索引示例值: 0 最小值: `0`
+	ColumnIndex int64 `json:"column_index"` // table 列索引示例值: 0 最小值: `0`
 }
 
 // UpdateDocxBlockReqUpdateGridColumnWidthRatio ...
