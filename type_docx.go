@@ -187,7 +187,7 @@ type DocxTextElementStyle struct {
 
 // DocxTextElementStyleLink ...
 type DocxTextElementStyleLink struct {
-	URL string `json:"url,omitempty"` // 超链接指向的 url (需要 url_encode)
+	URL string `json:"url"` // 超链接指向的 url (需要 url_encode)
 }
 
 // DocxTextElementTextRun ...
