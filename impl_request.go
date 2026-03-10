@@ -229,7 +229,8 @@ func (r *Lark) doRequest(ctx context.Context, rawHttpReq *rawHttpRequest, realRe
 	}
 
 	var respContent string
-	if respFilename == "" {
+	ct := resp.Header.Get("Content-Type")
+	if respFilename == "" && !strings.HasPrefix(ct, "image/") {
 		respContent = string(bs)
 	} else {
 		respContent = fmt.Sprintf("<FILE: %d>", len(bs))
