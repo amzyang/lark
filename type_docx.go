@@ -446,7 +446,7 @@ type DocxBlockOKRObjective struct {
 	Position     int64                `json:"position,omitempty"`      // Objective 的位置编号，对应 Block 中 O1、O2 的 1、2
 	Score        int64                `json:"score,omitempty"`         // 打分信息
 	Visible      bool                 `json:"visible,omitempty"`       // OKR Block 中是否展示该 Objective
-	Weight       int64                `json:"weight,omitempty"`        // Objective 的权重
+	Weight       float64              `json:"weight,omitempty"`        // Objective 的权重
 	ProgressRate *DocxOKRProgressRate `json:"progress_rate,omitempty"` // 进展信息
 	Content      *DocxBlockText       `json:"content,omitempty"`       // Objective 的文本内容
 }
@@ -460,7 +460,7 @@ type DocxBlockOKRKeyResult struct {
 	Position     int64                `json:"position,omitempty"`      // Key Result 的位置编号，对应 Block 中 KR1、KR2 的 1、2
 	Score        int64                `json:"score,omitempty"`         // 打分信息
 	Visible      bool                 `json:"visible,omitempty"`       // OKR Block 中是否展示该 Key Result
-	Weight       float32              `json:"weight,omitempty"`        // Key Result 的权重
+	Weight       float64              `json:"weight,omitempty"`        // Key Result 的权重
 	ProgressRate *DocxOKRProgressRate `json:"progress_rate,omitempty"` // 进展信息
 	Content      *DocxBlockText       `json:"content,omitempty"`       // Key Result 的文本内容
 }
