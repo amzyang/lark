@@ -203,10 +203,11 @@ type DocxTextElementMentionUser struct {
 
 // DocxTextElementMentionDoc ...
 type DocxTextElementMentionDoc struct {
-	Token   string             `json:"token,omitempty"`    // 云文档 token
-	ObjType DocxMentionObjType `json:"obj_type,omitempty"` // 云文档类型, 可选值有: `1`：Doc, `3`：Sheet, `8`：Bitable, `11`：MindNote, `12`：File, `15`：Slide, `16`：Wiki, `22`：Docx
-	URL     string             `json:"url,omitempty"`      // 云文档链接（需要 url_encode)
-	Title   string             `json:"title,omitempty"`    // 云文档标题，只读属性
+	Token        string             `json:"token,omitempty"`         // 云文档 token
+	ObjType      DocxMentionObjType `json:"obj_type,omitempty"`      // 云文档类型, 可选值有: `1`：Doc, `3`：Sheet, `8`：Bitable, `11`：MindNote, `12`：File, `15`：Slide, `16`：Wiki, `22`：Docx
+	URL          string             `json:"url,omitempty"`           // 云文档链接（需要 url_encode)
+	Title        string             `json:"title,omitempty"`         // 云文档标题，只读属性
+	FallbackType *string            `json:"fallback_type,omitempty"` // 无云文档阅读权限或云文档已删除时的降级方式（写入用）, 可选值有: `FallbackToLink`：降级为超链接, `FallbackToText`：降级为文本
 }
 
 // DocxTextElementReminder ...

@@ -157,8 +157,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantBullet struct {
 // CreateDocxDocumentBlockDescendantReqDescendantBulletElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantBulletElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantBulletElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                             `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                              `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantBulletElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantBulletElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantBulletElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -374,8 +374,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantCode struct {
 // CreateDocxDocumentBlockDescendantReqDescendantCodeElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantCodeElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantCodeElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                              `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                              `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                           `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                            `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantCodeElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantCodeElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantCodeElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -578,8 +578,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantEquation struct {
 // CreateDocxDocumentBlockDescendantReqDescendantEquationElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantEquationElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantEquationElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantEquationElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantEquationElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantEquationElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -792,8 +792,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading1 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading1Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading1Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading1ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading1ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading1ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading1ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -996,8 +996,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading2 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading2Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading2Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading2ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading2ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading2ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading2ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -1200,8 +1200,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading3 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading3Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading3Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading3ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading3ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading3ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading3ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -1404,8 +1404,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading4 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading4Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading4Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading4ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading4ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading4ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading4ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -1608,8 +1608,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading5 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading5Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading5Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading5ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading5ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading5ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading5ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -1812,8 +1812,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading6 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading6Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading6Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading6ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading6ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading6ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading6ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -2016,8 +2016,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading7 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading7Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading7Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading7ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading7ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading7ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading7ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -2220,8 +2220,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading8 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading8Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading8Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading8ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading8ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading8ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading8ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -2424,8 +2424,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantHeading9 struct {
 // CreateDocxDocumentBlockDescendantReqDescendantHeading9Element ...
 type CreateDocxDocumentBlockDescendantReqDescendantHeading9Element struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantHeading9ElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                  `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                  `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantHeading9ElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantHeading9ElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantHeading9ElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -2668,8 +2668,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantOrdered struct {
 // CreateDocxDocumentBlockDescendantReqDescendantOrderedElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantOrderedElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantOrderedElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                 `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                 `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                              `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                               `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantOrderedElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantOrderedElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantOrderedElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -2872,8 +2872,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantQuote struct {
 // CreateDocxDocumentBlockDescendantReqDescendantQuoteElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantQuoteElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantQuoteElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                               `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                               `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                            `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                             `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantQuoteElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantQuoteElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantQuoteElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -3088,8 +3088,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantSourceSynced struct {
 // CreateDocxDocumentBlockDescendantReqDescendantSourceSyncedElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantSourceSyncedElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantSourceSyncedElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                                      `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                                      `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                                   `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                                    `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantSourceSyncedElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantSourceSyncedElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantSourceSyncedElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -3312,8 +3312,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantText struct {
 // CreateDocxDocumentBlockDescendantReqDescendantTextElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantTextElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantTextElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                              `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                              `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                           `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                            `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantTextElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantTextElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantTextElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
@@ -3516,8 +3516,8 @@ type CreateDocxDocumentBlockDescendantReqDescendantTodo struct {
 // CreateDocxDocumentBlockDescendantReqDescendantTodoElement ...
 type CreateDocxDocumentBlockDescendantReqDescendantTodoElement struct {
 	TextRun     *CreateDocxDocumentBlockDescendantReqDescendantTodoElementTextRun     `json:"text_run,omitempty"`     // 文字。支持对 Page、Text、Heading1~9、Bullet、Ordered、Code、Quote、Todo 块进行修改
-	MentionUser *Mention                                                              `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
-	MentionDoc  *Mention                                                              `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
+	MentionUser *DocxTextElementMentionUser                                           `json:"mention_user,omitempty"` // @用户。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改。
+	MentionDoc  *DocxTextElementMentionDoc                                            `json:"mention_doc,omitempty"`  // @文档。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	Reminder    *CreateDocxDocumentBlockDescendantReqDescendantTodoElementReminder    `json:"reminder,omitempty"`     // 日期提醒。支持对 Text、Heading1~9、Bullet、Ordered、Quote、Todo 块进行修改
 	File        *CreateDocxDocumentBlockDescendantReqDescendantTodoElementFile        `json:"file,omitempty"`         // 内联文件。仅支持删除或移动位置, 不支持创建新的内联文件
 	InlineBlock *CreateDocxDocumentBlockDescendantReqDescendantTodoElementInlineBlock `json:"inline_block,omitempty"` // 内联块。仅支持删除或移动位置, 不支持创建新的内联块
